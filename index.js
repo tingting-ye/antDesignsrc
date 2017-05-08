@@ -1,15 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, hashHistory } from 'react-router'
-import Login from './public/login/login'
-import Homepage from './public/homePage/homepage'
-import Hangzhou from './public/hangzhou/hangzhou'
-ReactDOM.render((
-    <Router history={hashHistory}>
-        <Route path="/" component={Login}/>
-        <Route path="/homepage" component={Homepage}/>
-        <Route path="/hangzhou" component={Hangzhou}/>
-    </Router>
+import { Router,hashHistory } from 'react-router'
+// 路由集合
+import routers from './public/routers'
+ReactDOM.render(
+    (
+        <Router history={hashHistory}>
+            {routers}
+        </Router>
     ),
     document.getElementById('example')
 );
