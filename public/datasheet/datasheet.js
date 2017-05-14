@@ -1,8 +1,9 @@
 
 import React,{Component} from 'react'
 import {Table,Input,Button,Form} from 'antd'
+import TreeList from './Modal/treeList'
 import 'antd/dist/antd.css'
-import '../css/index.css'
+import '../css/datasheet.css'
 const FormItem = Form.Item;
 @Form.create({
 
@@ -110,16 +111,21 @@ export default class index extends Component{
 
     render() {
         return (
-            <div>
-                <Form>
-                    <Table
-                        ref="table"
-                        columns={this.columns()}
-                        dataSource={this.data.list}
-                    />
-                    <Button onClick={this.handles}>切换</Button>
-                    <Button onClick={this.query}>确认</Button>
-                </Form>
+            <div className="container">
+                <TreeList
+
+                />
+                <div className="container-right">
+                    <Form>
+                        <Table
+                            ref="table"
+                            columns={this.columns()}
+                            dataSource={this.data.list}
+                        />
+                        <Button onClick={this.handles}>切换</Button>
+                        <Button onClick={this.query}>确认</Button>
+                    </Form>
+                </div>
             </div>
         );
     }
