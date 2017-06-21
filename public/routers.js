@@ -8,10 +8,10 @@ import Homepage from './homePage/homepage'
 import Hangzhou from './hangzhou/hangzhou'
 
 const routers = (
-    <Route path="/" component={Datasheet}>
+    <Route path="/" component={Hangzhou}>
         <IndexRoute component={Welcome}/>
         <Route path="/homepage" component={Homepage}/>
-        <Route path="/hangzhou" component={Hangzhou}/>
+        <Route path="/hangzhou" component={Datasheet}/>
         <Route path="/login" component={Login}/>
     </Route>
 )
