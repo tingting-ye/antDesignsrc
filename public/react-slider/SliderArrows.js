@@ -7,7 +7,7 @@ import 'antd/dist/antd.css'
 export default class index extends Component{
   render() {
     return (
-      <div>homepage</div>
+      <div>左右切换</div>
     );
   }
 }

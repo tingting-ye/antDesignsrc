@@ -6,8 +6,9 @@ import 'antd/dist/antd.css'
 
 export default class index extends Component{
   render() {
+    const {data}=this.props
     return (
-      <div>homepage</div>
+      <li  className="slider_item"><img src={data.src}/></li>
     );
   }
 }

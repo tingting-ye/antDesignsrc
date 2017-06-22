@@ -4,10 +4,10 @@
 import React,{Component} from 'react'
 import 'antd/dist/antd.css'
 
-export default class index extends Component{
+export default class SliderDots extends Component{
   render() {
     return (
-      <div>homepage</div>
+      <div>源点切换</div>
     );
   }
 }
