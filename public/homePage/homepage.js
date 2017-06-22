@@ -3,12 +3,24 @@
  */
 import React,{Component} from 'react'
 import 'antd/dist/antd.css'
-import '../css/index.css'
+import Slider from '../react-slider/Slider'
+import '../css/Slider.css'
 
 export default class index extends Component{
+    constructor(props){
+        super(props)
+        this.state = {
+
+        }
+    }
     render() {
         return (
-            <div>homepage</div>
+            <div className="slider_map">
+                <Slider
+                // 存放图片信息
+                  item={}
+                />
+            </div>
         );
     }
 }

@@ -8,9 +8,9 @@ import Homepage from './homePage/homepage'
 import Hangzhou from './hangzhou/hangzhou'
 
 const routers = (
-    <Route path="/" component={Hangzhou}>
+    <Route path="/" component={Homepage}>
         <IndexRoute component={Welcome}/>
-        <Route path="/homepage" component={Homepage}/>
+        <Route path="/homepage" component={Hangzhou}/>
         <Route path="/hangzhou" component={Datasheet}/>
         <Route path="/login" component={Login}/>
     </Route>
