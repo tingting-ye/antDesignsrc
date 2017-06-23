@@ -14,16 +14,17 @@
     "autoprefixer": "^6.7.7",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
+    "babel-plugin-transform-decorators-legacy": "~1.3.4",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "~6.5.0",
     "css-loader": "^0.28.1",
     "json-loader": "^0.5.4",
     "postcss-loader": "^1.3.3",
     "react-router-dom": "^4.1.1",
     "style-loader": "^0.17.0",
-    "webpack-dev-server": "^2.4.5",
-    "babel-preset-stage-0": "~6.5.0",
-    "babel-plugin-transform-decorators-legacy": "~1.3.4"
+    "url-loader": "^0.5.9",
+    "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
     "prop-types": "^15.5.8",
