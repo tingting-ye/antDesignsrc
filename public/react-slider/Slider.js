@@ -22,10 +22,12 @@ export default class Slider extends Component {
 
   // 自动轮播
   goPlay() {
-    if (this.props.isAutoRun) {
+    const waiting = this.props.waiting || 5
+    const isAutoRun = this.props.isAutoRun || true
+    if (isAutoRun) {
       this.autoPlayFlag = setInterval(() => {
         this.turn(1)
-      }, this.props.waiting * 1000)
+      },waiting* 1000)
     }
   }
 
@@ -34,6 +36,7 @@ export default class Slider extends Component {
     clearInterval(this.autoPlayFlag)
   }
 
+  // 下一步
   turn(n) {
     let _n = this.state.nowLocal + n
     if (_n < 0) {  // 如果当前小于0，则显示第一条
@@ -49,35 +52,32 @@ export default class Slider extends Component {
 
   render() {
     const count = this.props.item.length
+    const direction = this.props.direction || "column"
+    const isPause = this.props.isPause || true
+    const isArrows = this.props.isArrows || true
+    const isDots = this.props.isDots || true
     const nowLocal = this.state.nowLocal
+    const isShowNum = this.props.isShowNum || 1
     // 获取子集
     const itemNodes = this.props.item.map((item, i) => {
       return (
-        <SliderItem data={item} key={"item" + i} sliderIndex={i} count={count} nowLocal={nowLocal}/>
+        <SliderItem data={item} key={"item" + i} sliderIndex={i} count={count} nowLocal={nowLocal} isShowNum={isShowNum}/>
       )
     })
 
     return (
       <div
         className="slider_bg"
-        onMouseOver={!this.props.isPause ? null : this.stopPlay.bind(this)}
-        onMouseOut={!this.props.isPause ? null : this.goPlay.bind(this)}>
+        onMouseOver={!isPause ? null : this.stopPlay.bind(this)}
+        onMouseOut={!isPause ? null : this.goPlay.bind(this)}
         >
         <ul
           className="sliderItem"
-          style={{
-            // 定位显示
-            // left: -600 * this.state.nowLocal + "px",
-            // 最后多少秒出现切换效果
-            transitionDuration: this.props.speed + "s",
-            // 占的宽度
-            width: 600 * this.props.item.length + 'px'
-          }}
         >
           {itemNodes}
         </ul>
-        {!this.props.isArrows ? null : <SliderArrows turn={this.turn.bind(this)}/>}
-        {!this.props.isDots ? null : <SliderDots/>}
+        {!isArrows ? null : <SliderArrows turn={this.turn.bind(this)} direction={direction}/>}
+        {!isDots ? null : <SliderDots turn={this.turn.bind(this)} nowLocal={nowLocal} count={count}/>}
       </div>
     );
   }

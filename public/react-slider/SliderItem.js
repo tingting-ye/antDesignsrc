@@ -10,9 +10,16 @@ export default class index extends Component {
   }
 
   render() {
-    const {data,nowLocal,sliderIndex} = this.props
+    const {data,nowLocal,sliderIndex,isShowNum} = this.props
+    const width = 100 / isShowNum+'%'
+    const compareArr = []
+    for(let i=0;i<isShowNum;i++){
+      const index = i+ nowLocal
+      compareArr.push(index)
+    }
+
     return (
-      <li className={ nowLocal===sliderIndex ? "slider_item active":"slider_item hidden"}><img src={data.src}/></li>
+      <li className={ compareArr.indexOf(sliderIndex)>=0 ? "slider_item active":"slider_item hidden"} style={{width:width}}>{data.content}</li>
     );
   }
 }
