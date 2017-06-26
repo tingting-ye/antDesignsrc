@@ -1,4 +1,45 @@
 .slider_map{
-    width: 600px;
+    width: 800px;
     margin: 0 auto;
+    border:1px solid #e2e2e2;
+    height: 500px;
+}
+.slider_bg{
+    margin: 0 auto;
+    width: 600px;
+    height: 374px;
+    overflow: hidden;
+    position: relative;
+}
+.sliderItem{
+    overflow: hidden;
+    position: absolute;
+}
+.sliderItem li{
+    float: left;
+}
+.sliderItem li img{
+    width: 100%;
+}
+
+.slider-arrow {
+    display: inline-block;
+    color: #fff;
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    z-index: 100;
+    padding: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.slider-arrow-left{
+    left:0
+}
+.slider-arrow-right{
+    right:0
+}
+.hidden{
+    display: none;
 }
