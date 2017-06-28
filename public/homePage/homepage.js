@@ -13,9 +13,6 @@ export default class index extends Component{
       // 存放图片信息
       item: [
         {
-          content:0
-        },
-        {
           content:1
         },
         {
@@ -29,20 +26,29 @@ export default class index extends Component{
         },
         {
           content:5
+        },
+        {
+          content:6
+        },{
+          content:7
+        },{
+          content:8
+        },{
+          content:9
         }
       ],
       // 判断是否自动轮播(不传默认为true)
       // isAutoRun:false,
       // 是否显示左右键(不传默认为true)
-      // isArrows:true,
+      // isArrows:false,
       // 是否显示底部切换点(不传默认为true)
-      // isDots:true,
+      // isDots:false,
       // 鼠标放置是否继续播放(不传默认为true)
       // isPause:false,
       // 轮播等待时间(默认两秒)
       // waiting:10,
       // 每次显示个数
-      isShowNum:2,
+      isShowNum:3
       // 横向还是纵向(默认横向"column")
       // direction:"row"
     }

@@ -17,7 +17,6 @@ export default class index extends Component {
       const index = i+ nowLocal
       compareArr.push(index)
     }
-
     return (
       <li className={ compareArr.indexOf(sliderIndex)>=0 ? "slider_item active":"slider_item hidden"} style={{width:width}}>{data.content}</li>
     );

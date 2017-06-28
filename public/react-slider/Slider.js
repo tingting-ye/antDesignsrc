@@ -23,8 +23,9 @@ export default class Slider extends Component {
   // 自动轮播
   goPlay() {
     const waiting = this.props.waiting || 5
-    const isAutoRun = this.props.isAutoRun || true
-    if (isAutoRun) {
+    const count = this.props.item.length
+    const isAutoRun = (this.props.isAutoRun===undefined || this.props.isAutoRun)?true:false
+    if (isAutoRun && count>1) {
       this.autoPlayFlag = setInterval(() => {
         this.turn(1)
       },waiting* 1000)
@@ -53,13 +54,14 @@ export default class Slider extends Component {
   render() {
     const count = this.props.item.length
     const direction = this.props.direction || "column"
-    const isPause = this.props.isPause || true
-    const isArrows = this.props.isArrows || true
-    const isDots = this.props.isDots || true
+    const isPause = (this.props.isPause===undefined || this.props.isPause)?true:false
+    const isArrows = (this.props.isArrows===undefined || this.props.isArrows)?true:false
+    const isDots = (this.props.isDots===undefined || this.props.isDots)?true:false
     const nowLocal = this.state.nowLocal
     const isShowNum = this.props.isShowNum || 1
+    let itemArr =  this.props.item.concat(this.props.item.slice(0,isShowNum-1))
     // 获取子集
-    const itemNodes = this.props.item.map((item, i) => {
+    const itemNodes = itemArr.map((item, i) => {
       return (
         <SliderItem data={item} key={"item" + i} sliderIndex={i} count={count} nowLocal={nowLocal} isShowNum={isShowNum}/>
       )
@@ -76,8 +78,8 @@ export default class Slider extends Component {
         >
           {itemNodes}
         </ul>
-        {!isArrows ? null : <SliderArrows turn={this.turn.bind(this)} direction={direction}/>}
-        {!isDots ? null : <SliderDots turn={this.turn.bind(this)} nowLocal={nowLocal} count={count}/>}
+        {!isArrows || count<=1 ? null : <SliderArrows turn={this.turn.bind(this)} direction={direction}/>}
+        {!isDots || count<=1 ? null : <SliderDots turn={this.turn.bind(this)} nowLocal={nowLocal} count={count}/>}
       </div>
     );
   }
