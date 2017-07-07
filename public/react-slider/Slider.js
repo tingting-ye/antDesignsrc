@@ -63,7 +63,7 @@ export default class Slider extends Component {
     // 获取子集
     const itemNodes = itemArr.map((item, i) => {
       return (
-        <SliderItem data={item} key={"item" + i} sliderIndex={i} count={count} nowLocal={nowLocal} isShowNum={isShowNum}/>
+        <SliderItem data={item} key={"item" + i} sliderIndex={i} count={count} direction={direction} nowLocal={nowLocal} isShowNum={isShowNum}/>
       )
     })
 
