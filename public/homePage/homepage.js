@@ -48,11 +48,16 @@ export default class index extends Component{
       // 轮播等待时间(默认两秒)
       // waiting:10,
       // 每次显示个数
-      isShowNum:3
+      isShowNum:3,
       // 横向还是纵向(默认横向"column")
-      // direction:"row"
+      direction:"column",
     }
   }
+  
+  componentDidMount(){
+
+  }
+
   render() {
     return (
       <div className="slider_map">
