@@ -46,7 +46,7 @@ export default class index extends Component {
   render() {
     const dragHandlers = {onStart: this.onStart, onStop: this.onStop};
     return (
-      <span>
+      <div>
         <Popconfirm
           title="Are you sure delete this task?"
           visible={this.state.visible}
