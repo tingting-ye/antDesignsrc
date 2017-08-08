@@ -1,5 +1,5 @@
-import DraggableText from './text'
+import draggableText from './text'
 
 export {
-  DraggableText,
+  draggableText,
 }
