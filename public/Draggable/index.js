@@ -1,6 +1,6 @@
-import draggableIndex from './home'
 import draggableText from './text'
+import draggableBorder from './border'
 
 export {
- draggableIndex,draggableText,
+ draggableText,draggableBorder
 }

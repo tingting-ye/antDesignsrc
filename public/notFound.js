@@ -7,9 +7,8 @@ export default class index extends Component {
   }
 
   render() {
-    debugger
     return (
-      <div>拖拽功能页面</div>
+      <div>不存在您搜索的链接</div>
     );
   }
 }

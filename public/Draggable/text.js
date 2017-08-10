@@ -13,7 +13,6 @@ export default class index extends Component {
 
 
   render() {
-    debugger
     return (
       <div>你好
       </div>
