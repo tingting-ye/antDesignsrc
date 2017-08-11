@@ -43,7 +43,7 @@ export default class index extends Component {
   render() {
     const dragHandlers = {onStart: this.onStart, onStop: this.onStop};
     return (
-      <div>
+      <div className="page">
         <Draggable {...dragHandlers}>
           <span className="box">I can be dragged anywhere</span>
         </Draggable>

@@ -147,8 +147,8 @@ export default class index extends Component {
               </Sider>
             ) : null
           }
-          <Layout style={{ padding: '24px' }}>
-            <Content style={{ background: '#fff', padding: 24, margin: 0, minHeight: 280 }}>
+          <Layout style={{ padding: '10px' }}>
+            <Content className="content" style={{ background: '#fff',padding: '10px'}}>
               {children}
             </Content>
           </Layout>

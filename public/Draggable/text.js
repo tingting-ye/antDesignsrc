@@ -14,7 +14,8 @@ export default class index extends Component {
 
   render() {
     return (
-      <div>你好
+      <div className="page">
+      你好
       </div>
     );
   }
