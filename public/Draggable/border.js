@@ -45,7 +45,7 @@ export default class index extends Component {
     return (
       <div className="page">
         <Draggable {...dragHandlers}>
-          <span className="box">I can be dragged anywhere</span>
+          <div className="box">I can be dragged anywhere</div>
         </Draggable>
       </div>
     );
