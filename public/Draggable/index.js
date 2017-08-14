@@ -1,8 +1,8 @@
 import '../css/draggable.less'
 
 import draggableText from './text'
-import draggableBorder from './border'
+import draggableTable from './table'
 
 export {
- draggableText,draggableBorder
+ draggableText,draggableTable
 }

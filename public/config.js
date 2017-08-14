@@ -20,8 +20,8 @@ export default (() => {
           },
           {
             id: 22,
-            name: '线条',
-            url: '/draggable/border',
+            name: '表格',
+            url: '/draggable/table',
             children: [],
           }
         ],
