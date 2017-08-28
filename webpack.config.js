@@ -1,6 +1,4 @@
-/**
- * Created by tingting on 2017/5/3.
- */
+
 module.exports = {
   devtool: 'eval-source-map',
   entry: __dirname + "/index.js",//已多次提及的唯一入口文件

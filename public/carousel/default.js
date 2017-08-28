@@ -2,9 +2,7 @@
  * Created by tingting on 2017/5/3.
  */
 import React,{Component} from 'react'
-import 'antd/dist/antd.css'
-import Slider from '../react-slider/Slider'
-import '../css/Slider.css'
+import Slider from '../components/react-slider/Slider'
 
 export default class index extends Component{
   constructor(props){
@@ -54,9 +52,7 @@ export default class index extends Component{
     }
   }
   
-  componentDidMount(){
-
-  }
+  componentDidMount(){}
 
   render() {
     return (
