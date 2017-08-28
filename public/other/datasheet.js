@@ -1,9 +1,6 @@
 
 import React,{Component} from 'react'
 import {Table,Input,Button,Form} from 'antd'
-import TreeList from './Modal/treeList'
-import 'antd/dist/antd.css'
-import '../css/datasheet.css'
 const FormItem = Form.Item;
 @Form.create({
 
@@ -112,9 +109,6 @@ export default class index extends Component{
     render() {
         return (
             <div className="container">
-                <TreeList
-
-                />
                 <div className="container-right">
                     <Form>
                         <Table

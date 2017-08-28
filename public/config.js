@@ -23,6 +23,12 @@ export default (() => {
             name: '表格',
             url: '/draggable/table',
             children: [],
+          },
+          {
+            id: 23,
+            name: '标签',
+            url: '/draggable/label',
+            children: [],
           }
         ],
       }, {
@@ -34,6 +40,18 @@ export default (() => {
             id: 31,
             name: '默认',
             url: '/carousel/default',
+            children: [],
+          },
+        ],
+      }, {
+        id: 4,
+        name: '其他',
+        url: '/other',
+        children: [
+          {
+            id: 41,
+            name: '表格处理',
+            url: '/other/datasheet',
             children: [],
           },
         ],

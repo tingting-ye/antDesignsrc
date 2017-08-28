@@ -2,7 +2,6 @@
  *  图片轮播组件
  */
 import React, {Component} from 'react'
-import 'antd/dist/antd.css'
 import SliderItem from './SliderItem'
 import SliderArrows from './SliderArrows'
 import SliderDots from './SliderDots'

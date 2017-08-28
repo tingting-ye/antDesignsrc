@@ -4,7 +4,7 @@ import {Link} from 'react-router'
 import {render} from 'react-dom'
 import Sortable from 'react-anything-sortable'
 
-import SortableItem  from './SortableItem'
+import SortableItem  from './children/SortableItem'
 
 export default class index extends Component{
    constructor() {

@@ -4,7 +4,6 @@ import { Layout, Menu, Breadcrumb, Icon, Message } from 'antd'
 const { SubMenu } = Menu
 const { Header, Content, Sider } = Layout
 import '../config'
-import 'antd/dist/antd.css'
 import '../css/index.less'
 
 export default class index extends Component {
