@@ -1,5 +1,6 @@
 import datasheet from './datasheet'
+import text from './text'
 
 export {
-  datasheet
+  datasheet,text
 }

@@ -45,6 +45,18 @@ export default (() => {
         ],
       }, {
         id: 4,
+        name: '动画',
+        url: '/action',
+        children: [
+          {
+            id: 41,
+            name: '位移效果',
+            url: '/action/action1',
+            children: [],
+          },
+        ],
+      }, {
+        id: 5,
         name: '其他',
         url: '/other',
         children: [
@@ -52,6 +64,12 @@ export default (() => {
             id: 41,
             name: '表格处理',
             url: '/other/datasheet',
+            children: [],
+          },
+          {
+            id: 42,
+            name: '练习',
+            url: '/other/text',
             children: [],
           },
         ],
